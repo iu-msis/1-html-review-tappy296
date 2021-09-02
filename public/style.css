@@ -5,14 +5,13 @@ header {
 }
 
 nav {
-  background-color: silver;
+  background-color: firebrick;
   color: gray;
 }
 
 h3 {
-  background-color: darkblue;
+  background-color: black;
   color: white;
-  border-radius: 20px;
 }
 
 footer {
@@ -31,14 +30,17 @@ footer {
   
 }
 
-#eventlist {
-  list-style-type: none;
+#int {
+  background-color: black;
+  color: white;
 }
 
 a:link {
   text-decoration: none;
   color: gray
 }
+
+
 
 h1 {
   margin-bottom: 0px;

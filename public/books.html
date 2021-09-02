@@ -18,12 +18,6 @@
 
     <div class="container">
         <header class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-          <img src="images/four_circles.png" alt="Four Circles Image" height="50px">
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-          <h1> Four Circles Racing Events</h1>
-          </div>
         </header>
           
         <nav class="row navbar navbar-default">
@@ -45,80 +39,102 @@
           </div>
         </nav>
 
-    <main>
-      <h1>Tables</h1>
+        <main>
+        <h1>Books</h1>
 
-          <table class='table table-bordered table-striped table-hover'>
-            <thead>
-              <tr> 
-                <th> University </th>
-                <th> Team Colors </th>
-                <th> Nickname </th> 
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>Indiana</td>
-                <td>Crimson</td>
-                <td>Hoosiers</td>
-              </tr>
-              <tr>
-                <td>Purdue</td>
-                <td>Black/Gold</td>
-                <td>Boilermakers</td>
-              </tr>
-              <tr>
-                <td>Michigan</td>
-                <td>Maize</td>
-                <td>Wolverines</td>
-              </tr>
-              <tr>
-                <td>Ohio State</td>
-                <td>Scarlet/Gray</td>
-                <td>Buckeyes</td>
-              </tr>
-              <tr>
-                <td>Michigan State</td>
-                <td>Green/White</td>
-                <td>Spartans</td>
-              </tr>
-            </tbody>
-             <tfoot>
-                <tr>
-                 <td class='text-center' colspan='3'>Information provided by Universities</td>
+             <table class='table table-bordered table-striped table-hover'>
+                <thead>
+                <tr> 
+                    <th> Title </th>
+                    <th> Author </th>
+                    <th> Year Published </th>
+                    <th> Publisher </th> 
+                    <th> Page Count </th> 
+                    <th> MSRP </th>   
+                
                 </tr>
-              </tfoot>
-          </table>
+                </thead>
 
-          <form action="confirmation.html" method="POST">
+                <tbody>
+                <tr>
+                    <td>Graduation Day: The Testing, Book 3</td>
+                    <td>Joelle Charbonneau</td>
+                    <td>June 2014</td>
+                    <td>Houghton Mifflin Harcourt</td>
+                    <td>205</td>
+                    <td>$17.99</td>
+                </tr>
+                <tr>
+                    <td>The Girl from the Well</td>
+                    <td>Rin Chupeco</td>
+                    <td>August 2014</td>
+                    <td>Sourcebooks Fire</td>
+                    <td>150</td>
+                    <td>$16.99</td>
+                </tr>
+                <tr>
+                    <td>The Thirteenth Mystery</td>
+                    <td>Michael Dahl</td>
+                    <td>March 2014</td>
+                    <td>Capstone Young Readers</td>
+                    <td>175</td>
+                    <td>$10.95</td>
+                </tr>
+                <tr>
+                    <td>Breakfast Served Anytime</td>
+                    <td>Sarah Combs</td>
+                    <td>April 2014</td>
+                    <td>Candlewick</td>
+                    <td>125</td>
+                    <td>$16.99</td>
+                </tr>
+                <tr>
+                    <td>The Almost Fearless Hamilton Squidlegger</td>
+                    <td>Timothy Basil Ering</td>
+                    <td>April 2014</td>
+                    <td>Candlewick</td>
+                    <td>120</td>
+                    <td>$16.99 </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                    <td class='text-center' colspan='6'>Information provided by https://www.publishersweekly.com/pw/by-topic/childrens/childrens-book-news/article/60631-a-complete-list-of-children-s-books-and-authors-at-wi9.html</td>
+                    </tr>
+                </tfoot>
+            </table>
 
-            <label>Book Title:</label> <input type="text" name='booktitle' id='booktitle'/>
-            <br>
+            <form action="confirmation.html" method="POST">
+
+                <label>Book Title:</label> <input type="text" name='booktitle' id='booktitle'/>
+                <br>
+                
+                <label>Author:</label> <input type="text" name='author' id='author'/>
+                <br>
+        
+                <label>Publication Year:</label> <input type="number" name='year' id='year'/>
+                <br>
+                
+                <label>Publisher:</label> <input type="number" name='year' id='year'/>
+                <br>
+                
+                <label>Page Count:</label> <input type="number" name='year' id='year'/>
+                <br>
+
+                <label>MSRP:</label> <input type="number" name='year' id='year'/>
+                <br>
+        
+                <input type='button' name='submit' id='subimt' value='Submit Survey' class='button'>
+                        
             
-            <label>Author</label> <input type="text" name='author' id='author'/>
-            <br>
-    
-            <label>Publication Year:</label> <input type="number" name='year' id='year'/>
-            <br>
-    
-            
-    
-           
-            <br>
-    
-            Comments:
-            <br>
-              <textarea name='comments' id='comments'></textarea>
-            <br>
-    
-            <input type='button' name='submit' id='subimt' value='Submit Survey' class='button'>
-                    
-          
-           </form>
+            </form>
 
 
 
-    </main>
+        </main>
+        <footer class="row">
+            MePage | Phone: 800-555-1234 | 9278 New Road, Kilcoole, Waterford 93027
+        </footer>
+    </div>
   </body>
 </html>
