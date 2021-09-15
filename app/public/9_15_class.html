@@ -7,7 +7,8 @@
 
     </header>
     <main>
-
+        <p> {{person.name.first}} {{person.name.last}}</p>
+        <p> {{ person }}</p>
         created () {
             fetch('https://randomuser.me/api')
             .then(response => response.json())
