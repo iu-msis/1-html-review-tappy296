@@ -9,11 +9,16 @@
     <main>
         <p> {{person.name.first}} {{person.name.last}}</p>
         <p> {{ person }}</p>
+        <!-- created is an event hoook function -->
         created () {
+        <!-- fetch goes to the url we specified -->
             fetch('https://randomuser.me/api')
+        <!-- then response finds the http text turns it into json objects -->
             .then(response => response.json())
+        <!-- Parsed json breaks it into sections -->
             .then((parsedJson) => {
-
+        <!-- makes object person callible in the first Json [0] -->
+                this.person = parsedJson.results[0]
             })
             .catch ( err => {
                 console.error(err)
