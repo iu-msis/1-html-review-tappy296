@@ -37,19 +37,18 @@
         <h3> This Page is all about Me </h3>
         <img src="images/FakePicture.jpg" alt="FakePic" heigh="250px">
         <h3> Who I Am </h3>
-
-        <p>My name is Jennifer Smith and I am 30 years old. I am currently living at 9278 New Road in Kilcoole, Waterford. I was born on February 27th, 1991.  </p>
-
-        <hr>
-        <h3> Contact Me </h3>
-        <p><a href="https://mail.google.com/mail/u/0/#inbox">Email: bradgibson1@example.com</a></p>
         <div id="offerApp" class="col col-8">
+        <p>First Name: {{person.name.first}} </p>
+        <p>Last Name: {{person.name.last}} </p>
+        <p>Country: {{person.country}} </p>
+        <h4> Contact Me </h4>
+        <p>Email: <a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
+        <p>{{ person }}</p>
 
-          <p>{{person.name.first}} {{person.name.last}}</p>
 
-          <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
-          <p>{{ person }}</p>
+
         </div>
+
       </main>
         
       <footer class="row">
