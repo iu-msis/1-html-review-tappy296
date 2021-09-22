@@ -80,3 +80,8 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+
+.navbar-nav {
+  padding-left:30px;
+  padding-right:30px;
+}
