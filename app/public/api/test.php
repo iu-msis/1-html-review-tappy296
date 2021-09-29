@@ -1,5 +1,4 @@
 <?php
-
 // Every variable begins with a $
 $num = 2;
 $foo = "To Be";
