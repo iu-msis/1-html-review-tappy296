@@ -46,7 +46,7 @@
 
         <main>
         <h1>Books</h1>
-
+            <div id="bookApp">
              <table id="taskTable" class='table table-bordered table-striped table-hover'>
                 <thead>
                 <tr> 
@@ -61,45 +61,13 @@
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td>Graduation Day: The Testing, Book 3</td>
+                <tr v-for="book in books">
+                    <td> {{ book.Title }} </td>
                     <td>Joelle Charbonneau</td>
                     <td>June 2014</td>
                     <td>Houghton Mifflin Harcourt</td>
                     <td>205</td>
                     <td>$17.99</td>
-                </tr>
-                <tr>
-                    <td>The Girl from the Well</td>
-                    <td>Rin Chupeco</td>
-                    <td>August 2014</td>
-                    <td>Sourcebooks Fire</td>
-                    <td>150</td>
-                    <td>$16.99</td>
-                </tr>
-                <tr>
-                    <td>The Thirteenth Mystery</td>
-                    <td>Michael Dahl</td>
-                    <td>March 2014</td>
-                    <td>Capstone Young Readers</td>
-                    <td>175</td>
-                    <td>$10.95</td>
-                </tr>
-                <tr>
-                    <td>Breakfast Served Anytime</td>
-                    <td>Sarah Combs</td>
-                    <td>April 2014</td>
-                    <td>Candlewick</td>
-                    <td>125</td>
-                    <td>$16.99</td>
-                </tr>
-                <tr>
-                    <td>The Almost Fearless Hamilton Squidlegger</td>
-                    <td>Timothy Basil Ering</td>
-                    <td>April 2014</td>
-                    <td>Candlewick</td>
-                    <td>120</td>
-                    <td>$16.99 </td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -108,6 +76,7 @@
                     </tr>
                 </tfoot>
             </table>
+          </div>
 
             <form action="confirmation.html" method="POST">
 
@@ -141,6 +110,7 @@
             MePage | Phone: 800-555-1234 | 9278 New Road, Kilcoole, Waterford 93027
         </footer>
     </div>
+    <script src="js/books.js"></script>
     <script src="js/tablesort.min.js"></script>
     <script>
       new Tablesort(document.getElementById('taskTable'));
