@@ -46,7 +46,7 @@
 
         <main>
         <h1>Books</h1>
-            <div id="bookApp">
+            <div class="container" id="bookApp">
              <table id="taskTable" class='table table-bordered table-striped table-hover'>
                 <thead>
                 <tr> 
@@ -63,11 +63,11 @@
                 <tbody>
                 <tr v-for="book in books">
                     <td> {{ book.Title }} </td>
-                    <td>Joelle Charbonneau</td>
-                    <td>June 2014</td>
-                    <td>Houghton Mifflin Harcourt</td>
-                    <td>205</td>
-                    <td>$17.99</td>
+                    <td>{{ book.Author }}</td>
+                    <td>{{ book.Year_Published }}</td>
+                    <td>{{ book.Publisher }}</td>
+                    <td>{{ book.Page_Count }}</td>
+                    <td>{{ prettyDollar(book.MSRP) }}</td>
                 </tr>
                 </tbody>
                 <tfoot>
