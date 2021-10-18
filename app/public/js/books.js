@@ -29,4 +29,4 @@ const book = {
     }
   }
   
-Vue.createApp(Offer).mount('#bookApp');
+Vue.createApp(book).mount('#bookApp');
