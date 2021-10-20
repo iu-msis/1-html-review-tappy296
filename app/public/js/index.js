@@ -24,12 +24,16 @@ const Offer = {
         }
     },
     computed: {
+    },
+    methods: {
         prettyBirthday() {
             return dayjs(this.person.dob.date)
             .format('D MMM YYYY');
-        }
-    },
-    methods: {
+        },
+        prettyDollar(n) {
+            const d = new Intl.NumberFormat("en-US").format(n);
+            return "$ " + d;
+        },
         fetchUserData() {
             fetch('https://randomuser.me/api/')
             .then(response => response.json())
