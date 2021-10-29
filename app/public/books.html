@@ -6,12 +6,11 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <!-- <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
+   
    <script src="https://unpkg.com/vue@next"></script>
    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-
-   <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  
 
    <title>Book</title>
   </head>
@@ -67,6 +66,8 @@
                     <td> {{ book.Publisher }} </td>
                     <td> {{ book.Pages }} </td>
                     <td> {{ book.MSRP }} </td>
+                    <td><button type="button" v-on:click="handleEditBook(book)" class="btn btn-outline-secondary btn-sm">Edit</button></td>
+                    <td><button type="button" v-on:click="postDeleteBook(book)" class="btn btn-outline-secondary btn-sm">Delete</button></td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -76,7 +77,8 @@
                 </tfoot>
             </table>
           
-          <form v-on:submit="postNewBook">
+          <h3>{{ selectedBook === null ? "Add " : "Edit " }} Book</h3>
+          <form v-on:submit="postBook">
               <div class="mb-3">
                 <label for="Title" class="form-label">Title</label>
                 <input type="text" v-model="bookForm.Title"
@@ -102,7 +104,10 @@
                 <label for="MSRP" class="form-label">MSRP</label>
                 <input type="text" v-model="bookForm.MSRP" class="form-control" id="MSRP">
               </div>
-              <button type="submit" class="btn btn-outline-secondary"> Submit</button>
+              <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add " : "Edit " }} Book</button>
+              <button type="button" class="btn btn-outline-secondary" 
+                 v-if="selectedBook"
+                 v-on:click="handleResetEdit">Cancel Edit</button>
             </form>
 
       </div>        
@@ -111,10 +116,11 @@
     <footer class="row">
        MePage | Phone: 800-555-1234 | 9278 New Road, Kilcoole, Waterford 93027
     </footer>
-    <!-- Bootstrap Bundle with Popper -->
-    
-    <script src="js/books.js"></script>
-    <!-- <script src="js/tablesort.min.js"></script> -->
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+ 
+     <script src="js/books.js"></script>
 
   </body>
 </html>
